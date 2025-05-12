@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Magazine : MonoBehaviour
+public class Magazine : MonoBehaviour, IReloadable
 {
     public int MaxBullets = 20;
     public float ChargineTime = 2f;
@@ -21,7 +21,6 @@ public class Magazine : MonoBehaviour
             else
                 _CurrentBullets = value;
 
-            Debug.Log("Bullets: " + value);
             OnBulletChanged?.Invoke(_CurrentBullets);
             OnChargeChanged?.Invoke((float)_CurrentBullets / MaxBullets);
         }
