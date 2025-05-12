@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Rendering.UI;
 public class Shooter : MonoBehaviour
 {
     public LayerMask HittableMask;
@@ -13,6 +14,13 @@ public class Shooter : MonoBehaviour
 
     public UnityEvent<Vector3> OnShootSuccess;
     public UnityEvent OnShootFail;
+
+    private Magazine Magazine;
+
+    private void Awake()
+    {
+        Magazine = GetComponent<Magazine>();
+    }
 
     private void Start()
     {
@@ -35,8 +43,15 @@ public class Shooter : MonoBehaviour
         var WFS = new WaitForSeconds(ShootDelay);
 
         while (true)
-        {
-            Shoot();
+        {   
+            if (Magazine.Use())
+            {
+                Shoot();
+            }
+            else
+            {
+                OnShootFail?.Invoke();
+            }
             yield return WFS;
         }
     }
