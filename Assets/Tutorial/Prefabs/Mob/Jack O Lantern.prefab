@@ -48,6 +48,8 @@ GameObject:
   - component: {fileID: 8098349012572095979}
   - component: {fileID: 534792757072977549}
   - component: {fileID: 4189787665252233544}
+  - component: {fileID: 786724364666481220}
+  - component: {fileID: 3948685749080122765}
   m_Layer: 22
   m_Name: Jack O Lantern
   m_TagString: Untagged
@@ -210,6 +212,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3948685749080122765}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8098349012572095979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,6 +332,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Destination: {x: 0, y: 2, z: 1}
+--- !u!114 &786724364666481220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6720625749630981379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016b9fb46c71bbf4093822158ebd854e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -9148520486915895448}
+        m_TargetAssemblyTypeName: Mob, Assembly-CSharp
+        m_MethodName: Destroy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!135 &3948685749080122765
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6720625749630981379}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.283
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1001 &1878233207981027544
 PrefabInstance:
   m_ObjectHideFlags: 0

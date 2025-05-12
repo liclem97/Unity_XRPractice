@@ -12,7 +12,6 @@ public class Mob : MonoBehaviour
 
     private void Start()
     {
-        Invoke(nameof(Destroy), 3f); // 3ÃÊ ÈÄ ÀÚÆø
         OnCreated?.Invoke();
     }
     public void Destroy()
