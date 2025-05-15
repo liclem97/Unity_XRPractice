@@ -13,6 +13,7 @@ public class Mob : MonoBehaviour
     private void Start()
     {
         OnCreated?.Invoke();
+        MobManager.Instance.OnSpawned(this);
     }
     public void Destroy()
     {
@@ -21,5 +22,6 @@ public class Mob : MonoBehaviour
         
         Destroy(gameObject, DestroyDelay);
         OnDestroyed?.Invoke();
+        MobManager.Instance.OnDestroyed(this);
     }
 }
