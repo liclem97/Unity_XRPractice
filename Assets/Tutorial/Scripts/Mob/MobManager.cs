@@ -41,4 +41,12 @@ public class MobManager : MonoBehaviour
             OnDestroy?.Invoke(mob);
         }
     }
+
+    public void DestroyAll()
+    {
+        while (Mobs.Count > 0)
+        {
+            Mobs[0]?.Destroy();
+        }
+    }
 }
