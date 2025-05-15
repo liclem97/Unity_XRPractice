@@ -47,9 +47,9 @@ GameObject:
   - component: {fileID: -9148520486915895448}
   - component: {fileID: 8098349012572095979}
   - component: {fileID: 534792757072977549}
-  - component: {fileID: 4189787665252233544}
   - component: {fileID: 786724364666481220}
   - component: {fileID: 3948685749080122765}
+  - component: {fileID: 7142782598604966268}
   m_Layer: 22
   m_Name: Jack O Lantern
   m_TagString: Untagged
@@ -113,8 +113,8 @@ MonoBehaviour:
   OnCreated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4189787665252233544}
-        m_TargetAssemblyTypeName: ChangeAgentDestination, Assembly-CSharp
+      - m_Target: {fileID: 7142782598604966268}
+        m_TargetAssemblyTypeName: ChangeAgentDestinationToCore, Assembly-CSharp
         m_MethodName: Call
         m_Mode: 1
         m_Arguments:
@@ -319,19 +319,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Min: 0.8
   Max: 1.5
---- !u!114 &4189787665252233544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6720625749630981379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a5350af42cb0a3439eabd3737534bbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Destination: {x: 0, y: 2, z: 1}
 --- !u!114 &786724364666481220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,6 +359,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.283
   m_Center: {x: 0, y: 0.2, z: 0}
+--- !u!114 &7142782598604966268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6720625749630981379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0f6a2ee8a29864181cd8b5ae359a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1878233207981027544
 PrefabInstance:
   m_ObjectHideFlags: 0
